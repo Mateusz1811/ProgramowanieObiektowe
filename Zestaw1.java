@@ -1,5 +1,3 @@
-
-
 class HelloWorld {
     public static void main(String[] args) {
         //zad1();
@@ -35,23 +33,71 @@ class HelloWorld {
         String d = a + b + c;
         System.out.println(d);
     }
-    static void zad41()
-    {
-        System.out.println("         *    ");
-        System.out.println("         **   ");
-        System.out.println("         ***  ");
-        System.out.println("************* ");
-        System.out.println("**************");
-        System.out.println("************* ");
-        System.out.println("         ***  ");
-        System.out.println("         **   ");
-        System.out.println("         *    ");
+    private static void zad4a(){
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("*\n");
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("* *\n");
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("* * *\n");
+        for(int i = 0; i < 14; i++){
+            System.out.print("* ");
+        }
+        System.out.print("\n");
+        for(int i = 0; i < 15; i++){
+            System.out.print("* ");
+        }
+        System.out.print("\n");
+        for(int i = 0; i < 14; i++){
+            System.out.print("* ");
+        }
+        System.out.print("\n");
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("* * *\n");
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("* *\n");
+        for(int i = 0; i < 20; i++){
+            System.out.print(" ");
+        }
+        System.out.print("*\n");
     }
-    static void zad42()
-    {
-        System.out.println("****");
-        System.out.println("*****");
-        System.out.println("******");
+    private static void zad4b(){
+        int a = 5;
+        int b = 1;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < a; j++) {
+                System.out.print(" ");
+            }
+            a--;
+            for (int j = 0; j < b; j++) {
+                System.out.print("* ");
+            }
+            b++;
+            System.out.print("\n");
+        }
+        a = 1;
+        b = 5;
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < a; j++) {
+                System.out.print(" ");
+            }
+            a++;
+            for (int j = 0; j < b; j++) {
+                System.out.print("* ");
+            }
+            b--;
+            System.out.print("\n");
+        }
     }
     static void zad5()
     {
@@ -71,7 +117,7 @@ class HelloWorld {
         char malpa = '@';
         char wieksze = '>';
         char tylda = '~';
-        
+
         System.out.println((int) a);
         System.out.println((int) wykrzyknik);
         System.out.println((int) malpa);
@@ -119,20 +165,14 @@ class HelloWorld {
         String formattedDate = new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(data);
         System.out.println("Dzisiaj jest " + formattedDate);
     }
-    static void zad13()
-    {
-        int[] numery = {54,103,241,67,9999,18,174700};
-        for(int numer : numery){
-            if(numer<0 || numer>1114111)
-            {
-                System.out.println("Numer " + numer + "jest poza zakresem");
-            }
-            else
-            {
-                char character = (char) numer;
-                System.out.println("Numer " + numer + "odpowiada znakowi: " + character);
-            }
-        }
+    static void zad13(){
+        System.out.println(Character.toString((char) 54));
+        System.out.println(Character.toString((char) 103));
+        System.out.println(Character.toString((char) 241));
+        System.out.println(Character.toString((char) 67));
+        System.out.println(Character.toString((char) 9999));
+        System.out.println(Character.toString((char) 18));
+        System.out.println(Character.toString((char) 174700));
     }
-    
+
 }
