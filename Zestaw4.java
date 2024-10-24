@@ -11,7 +11,7 @@ public class Main {
 
         for(int i = 0; i < n; i++)
         {
-           tablica[i] = random.nextInt(maxWartosc - minWartosc + 1) + minWartosc;
+            tablica[i] = random.nextInt(maxWartosc - minWartosc + 1) + minWartosc;
         }
         return tablica;
     }
@@ -153,24 +153,24 @@ public class Main {
 
     public static int ileUnikalnych(int[] tab)
     {
-       int count = 0;
-       for(int i = 0; i<tab.length; i++)
-       {
-           boolean Unikat = true;
-           for(int j=0;j<tab.length;j++)
-           {
-               if(i!=j && tab[i] == tab[j])
-               {
-                   Unikat = false;
-                   break;
-               }
-           }
-           if(Unikat)
-           {
-               count++;
-           }
-       }
-       return count;
+        int count = 0;
+        for(int i = 0; i<tab.length; i++)
+        {
+            boolean Unikat = true;
+            for(int j=0;j<tab.length;j++)
+            {
+                if(i!=j && tab[i] == tab[j])
+                {
+                    Unikat = false;
+                    break;
+                }
+            }
+            if(Unikat)
+            {
+                count++;
+            }
+        }
+        return count;
 
     }
     public static int sumaDodatnich(int[] tab)
@@ -199,7 +199,7 @@ public class Main {
         return count;
     }
 
-  //  public static int sumaOdwrotnosci(int[] tab)
+    //  public static int sumaOdwrotnosci(int[] tab)
     //{
 
     //}
@@ -291,7 +291,7 @@ public class Main {
         }
         return wyniki;
     }
-    
+
     public static int NajdluzszyCiagDodatnich(int[] tab)
     {
         int maxDlugosc = 0;
@@ -309,7 +309,7 @@ public class Main {
         maxDlugosc = Math.max(maxDlugosc, aktualnaDlugosc);
         return maxDlugosc;
     }
-    
+
     public static int NajdluzszyCiagUjemnych(int[] tab)
     {
         int maxDlugosc = 0;
@@ -327,7 +327,7 @@ public class Main {
         maxDlugosc = Math.max(maxDlugosc, aktualnaDlugosc);
         return maxDlugosc;
     }
-    
+
     public static int[] OdwrocTablice(int[] tab)
     {
         int[] odwrocona = new int[tab.length];
@@ -337,7 +337,20 @@ public class Main {
         }
         return odwrocona;
     }
-    
+
+    public static void OdwrocTablice2(int []tab, int IndeksStart, int IndeksStop)
+    {
+        while(IndeksStart<IndeksStop)
+        {
+            int temp = tab[IndeksStart];
+            tab[IndeksStart] = tab[IndeksStop];
+            tab[IndeksStop] = temp;
+
+            IndeksStart++;
+            IndeksStop--;
+        }
+    }
+
 
 
 
@@ -395,6 +408,6 @@ public class Main {
         }
 
     }
-    
+
 
 }
